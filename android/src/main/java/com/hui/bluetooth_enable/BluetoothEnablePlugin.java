@@ -24,7 +24,7 @@ import io.flutter.plugin.common.PluginRegistry.ActivityResultListener;
 import io.flutter.plugin.common.PluginRegistry;
 
 /** FlutterBluePlugin */
-public class BluetoothEnablePlugin implements FlutterPlugin, ActivityAware, MethodCallHandler, ActivityResultListener, PluginRegistry.RequestPermissionsResultListener {
+public class BluetoothEnablePlugin implements FlutterPlugin, ActivityAware, MethodCallHandler, ActivityResultListener, PluginRegistry.RequestPermissionsResultListener, MethodCallHandler {
     private static final String TAG = "BluetoothEnablePlugin";
     private Activity activity;
     private MethodChannel channel;
@@ -164,6 +164,7 @@ public class BluetoothEnablePlugin implements FlutterPlugin, ActivityAware, Meth
         this.mBluetoothManager = null;
 
     }
+
 
 
     /* ActivityAware implementation */
