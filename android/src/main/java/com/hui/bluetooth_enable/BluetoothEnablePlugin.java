@@ -35,12 +35,6 @@ public class BluetoothEnablePlugin implements FlutterPlugin, ActivityAware, Meth
     private static final int REQUEST_ENABLE_BLUETOOTH = 1;
     private static final int REQUEST_CODE_SCAN_ACTIVITY = 2777;
 
-
-    public BluetoothEnablePlugin() {
-        this.onDetachedFromEngine(null);
-    }
-
-
     @Override
     public void onMethodCall(MethodCall call, Result result) {
         if(mBluetoothAdapter == null && !"isAvailable".equals(call.method)) {
